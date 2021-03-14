@@ -1,0 +1,21 @@
+﻿@model List<Omicron.library.Entities.Entity.Book>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ISBN Kodu</th>
+            <th scope="col">Kitap Adı</th>
+            <th scope="col">Kütüphanede Var Mı?</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model)
+        {
+            <tr>
+                <th scope="col">@item.ISBN</th>
+                <th scope="col">@item.Name</th>
+                <th scope="col">@(item.Give?"Yok":"Var")</th>
+            </tr>
+        }
+
+    </tbody>
+</table>

@@ -1,0 +1,28 @@
+﻿@model Omicron.library.UI.Models.EnCokAlinanKitaplarModel
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ISBN Kodu</th>
+            <th scope="col">Kitap Adı</th>
+            <th scope="col">Topam Süre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 0;
+
+
+            @foreach (var item in Model.Books)
+            {
+                <tr>
+                    <th scope="col">@item.ISBN</th>
+                    <th scope="col">@item.Name</th>
+                    <th scope="col">@Model.sayilar[i]</th>
+                </tr>
+                i++;
+           }
+        }
+
+
+    </tbody>
+</table>

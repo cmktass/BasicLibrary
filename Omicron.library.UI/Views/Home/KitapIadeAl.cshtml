@@ -1,0 +1,14 @@
+﻿@model KitapOduncModel
+<form asp-controlles="home" asp-action="kitapiadeal" method="Post">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Kitap ISBN</label>
+        <input type="text" asp-for="ISBN" class="form-control" placeholder="Kitap ISBN NOsunu Gir:">
+        <span asp-validation-for="ISBN" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Öğrenci Tc</label>
+        <input type="text" asp-for="Tc" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Öğrenci Tc Gir">
+        <span asp-validation-for="ISBN" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Gönder</button>
+</form>

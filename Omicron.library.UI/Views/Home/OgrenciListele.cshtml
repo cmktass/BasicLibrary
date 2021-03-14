@@ -1,0 +1,21 @@
+﻿@model List<Omicron.library.Entities.Entity.Student>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ISBN Kodu</th>
+            <th scope="col">Kitap Adı</th>
+            <th scope="col">Tc Kimlik No</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model)
+        {
+            <tr>
+                <th scope="col">@item.Name</th>
+                <th scope="col">@item.Surname</th>
+                <th scope="col">@item.Tc</th>
+            </tr>
+        }
+
+    </tbody>
+</table>
